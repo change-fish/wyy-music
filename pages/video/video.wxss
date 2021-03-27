@@ -1,0 +1,107 @@
+/* pages/video/video.wxss */
+
+/* 头部搜索样式 */
+.header{
+  display: flex;
+  margin: 10rpx;
+  justify-content: center;
+}
+.header image{
+  height: 60rpx;
+  width: 60rpx;
+  padding :0 10rpx;
+}
+.search{
+  flex: 1;
+  text-align: center;
+  font-size: 30rpx;
+  border-radius: 30rpx;
+  border: solid 1rpx #d43c33;
+  color:#d43c33;
+  line-height: 60rpx;
+}
+
+/* 导航区样式 */
+.navWrapper{
+  display: flex;
+  white-space: nowrap;
+}
+.navItem{
+  padding: 2rpx 20rpx;
+  font-size: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.navContent{
+  padding: 10rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #eee;
+}
+.navItem .active{
+  border-bottom: 1rpx solid #d43c33;
+}
+
+/* 视频展示区域样式 */
+.videoScroll {
+  margin-top: 10rpx;
+  /* calc: 可以动态计算css的宽高， 运算符左右两侧必须加空格，否则计算会失效 */
+  /* 视口单位： vh vw  1vh = 1%的视口高度  1vw = 1%的视口宽度*/
+  /* 小程序的高度不是我们写的，计算的时候不算在总高度内 */
+  height: calc(100vh - 152rpx);
+  /*height: calc(100vh - 100rpx); 用来测试页面上拉触底*/
+}
+.videoItem {
+  padding: 0 3%;
+}
+.videoItem video {
+  width: 100%;
+  height: 360rpx;
+  border-radius: 10rpx;
+}
+
+.common {
+  width: 100%;
+  height: 360rpx;
+  border-radius: 10rpx;
+} 
+.content{
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  max-width: 500rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.footer{
+  border-top: 1rpx solid #eee;
+  padding: 20rpx 0;
+}
+.avatar{
+  width:60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.nickName{
+  font-size: 26rpx;
+  vertical-align: center;
+  margin-left: 20rpx;
+}
+.comments_praised{
+  float: right;
+}
+.btn{
+  padding: 0 0 0 50rpx;
+  position: relative;
+  display: inline;
+  background-color: transparent;
+}
+.btn:after{
+  border: none;
+}
+.videoText{
+  font-size: 26rpx;
+  margin-left: 50rpx;
+  position: relative;
+}

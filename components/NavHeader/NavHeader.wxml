@@ -1,0 +1,12 @@
+<!--components/NavHeader/NavHeader.wxml-->
+<!-- <text>components/NavHeader/NavHeader.wxml</text> -->
+
+<view class="navContainer">
+    <view class="header">
+      <text class="title">{{title}}</text>
+    </view>
+    <view>
+      <text>{{nav}}</text>
+      <text class="more">查看更多</text>
+    </view>
+</view>

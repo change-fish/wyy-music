@@ -1,0 +1,85 @@
+<!--index.wxml,入口默认显示的页面-->
+
+
+<view class="container">
+  
+  <!-- 轮播图区域 -->
+  <swiper class="swiper" indicator-dots indicator-color="ivory" indicator-active-color="#d43c33">
+    <swiper-item wx:for="{{bannerList}}" wx:key="bannerID">
+      <image src="{{item.pic}}" class="swiper-img"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 五个图标导航区域 -->
+  <view class="navContainer">
+    <view class="navItem" bindtap="toRecommendSong">
+      <text class="iconfont icontuijian"></text>
+      <text class="">每日推荐</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icongedan"></text>
+      <text class="">歌单</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont iconpaixingbang"></text>
+      <text class="">排行榜</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icondiantai"></text>
+      <text class="">电台</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont iconzhibo"></text>
+      <text class="">直播</text>
+    </view>
+  </view>
+
+  <!-- 推荐歌曲部分 -->
+  <view>
+    <!-- 推荐歌曲导航栏 -->
+    <NavHeader title="推荐歌曲" nav="为你精心推荐"></NavHeader>
+
+    <!-- 推荐歌曲内容区 -->
+    <!-- scroll-view需要设置enable-flex为true才能使用flex布局，但是不行，需要再套一个外层标签 -->
+    <scroll-view class="scroll" enable-flex scroll-x>
+      <view class="recommendScroll">
+        <view class="scrollItem" wx:for="{{recommendList}}" wx:key="id">
+          <image src="{{item.picUrl}}"></image>
+          <text>{{item.name}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 排行榜 -->
+  <view class="topList">
+    <!-- 排行榜导航栏 -->
+    <NavHeader title="排行榜" nav="热歌风向标"></NavHeader>
+    <!-- next-margin用于设置轮播图两页显示 -->
+    <swiper class="topListSwiper" next-margin="100rpx">
+      <swiper-item wx:for="{{topList}}" wx:key="name">
+        <view class="topListSwiperItem">
+          <view class="title">{{item.name}}</view>
+          <view class="musicItem" wx:for="{{item.tracks}}" wx:for-item="mitem" wx:key="id">
+            <image src="{{mitem.al.picUrl}}"></image>
+            <text class="count">{{index+1}}</text>
+            <text class="musicName">{{mitem.name}}</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+</view>
+<!-- <view class="container">
+  <view class="user" wx:if="{{userInfo.avatarUrl}}">
+    <image class="avatarUrl" src="{{userInfo.avatarUrl}}" alt=""/> 
+     <text class="username">{{userInfo.nickName}}</text>
+  </view>
+  <view wx:else class="touser">
+    <button class="getUserInfo" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息</button>
+  </view>
+  <text class="toLogs" catchtap="toLogs">helloworld</text>
+</view> -->
+
+

@@ -1,0 +1,33 @@
+<!--pages/login/login.wxml-->
+
+<view class="container">
+  <view class="wrapper">
+    <view class="left-top-sign">LOGIN</view>
+    <view class="welcome">
+      欢迎回来！
+    </view>
+    <view class="input-content">
+      <view class="input-item">
+        <text class="tit">手机号码</text>
+        <input  type="text" placeholder="请输入手机号码" data-test="abc" data-type="phone" id="phone" bindinput="handleInput"/>
+        <!-- bindinput表单里内容时时改变时触发 -->
+        <!-- data-test,id等会作为传入的事件的属性宣传入给handleInput函数,data-属性名="属性值" 是一种语法，给事件传值，-->
+      </view>
+      <view class="input-item">
+        <text class="tit">密码</text>
+        <input type="password"  placeholder="请输入密码" data-test="abc" data-type="password" id="password" bindinput="handleInput"/>
+      </view>
+    </view>
+
+    <!-- 点击登陆的回调函数 -->
+    <button class="confirm-btn" bindtap="login">登录</button>
+    <view class="forget-section">
+      忘记密码?
+    </view>
+  </view>
+  <view class="register-section">
+    还没有账号?
+    <text >马上注册</text>
+  </view>
+</view>
+

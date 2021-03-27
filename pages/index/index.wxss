@@ -1,0 +1,118 @@
+/**index.wxss**/
+
+/* 轮播图样式 */
+.swiper{
+  height: 300rpx;
+  width: 100%;
+}
+.swiper-img{
+  width: 100%;
+  height: 100%;
+}
+
+/* 五个图标导航样式 */
+.navContainer{
+  display: flex;
+  justify-content: space-around;
+  height:180rpx ;
+}
+.navItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 19%;
+  font-size: 35rpx;
+}
+.iconfont{
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 50%;
+  font-size: 50rpx;
+  text-align: center;
+  background-color: rgb(240,19,19);
+  color: #fff;
+  margin: 20rpx 0;
+}
+
+/* 推荐歌单内容区样式 */
+.scroll{
+  height: 350rpx;
+}
+.recommendScroll{
+  display: flex;
+  flex-direction: row;
+}
+.scrollItem{
+  width: 200rpx;
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx;
+}
+.scrollItem image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+.scrollItem text{
+  padding: 10rpx 0;
+  font-size: 26rpx;
+  /* line-height: 30rpx; */
+  width: 200rpx;
+  height:60rpx;
+  /* height:70rpx; */
+  /* 文本溢出隐藏 */
+  /* display: block;
+  white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp: 2;
+  word-wrap: break-word;/* 必须加这个 */
+}
+
+/* 排行榜样式区 */
+.topList{
+  width: 100%;
+  /* height: 1000rpx; */
+}
+.topListSwiper{
+  height: 400rpx;
+  padding: 20rpx;
+}
+.topListSwiperItem{
+  width: 90%;
+  background-color: #eee;
+}
+.topListSwiperItem .title{
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+.musicItem{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.musicItem image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+.count{
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 35rpx;
+}
+.musicName{
+  font-size: 35rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  max-width: 400rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
